@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do you love me?</title>
+</head>
+<body onload="init()">
+<h1>Do you love me?</h1>
+<button type="button" onclick="alert('yes.you are right!')">yes</button>
+<button type="button" id="no" onmouseover="move()" style="position: absolute">no</button>
+<script>
+
+    function move() {
+        let element =document.getElementById("no");
+        element.style.left=Math.random()*(window.innerWidth)+'px'; //lấy giá trị random cua left trong khoang 0 --> window.innerwidth(chieu rong của trang)
+        element.style.top=Math.random()*(window.innerHeight)+'px';//lấy giá trị random cua left trong khoang 0 --> window.innerheight(chieu cao của trang)
+    }
+    function init() {
+        window.addEventListener('click',move);
+    }
+</script>
+</body>
+</html>
